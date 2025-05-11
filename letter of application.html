@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style-final.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>👋RESUME👋</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+    .section-hover {
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
+    .section-header {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+    .section-content {
+      text-align: left;
+    }
+    .section-content ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .experience-block {
+      margin-bottom: 1.5em;
+    }
+    .certificate-box {
+      display: none;
+      margin-top: 10px;
+    }
+    .certificate-box img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #0a3968;
+      border-radius: 8px;
+    }
+    .cert-button {
+      margin-top: 8px;
+      padding: 6px 12px;
+      border: none;
+      background-color: #1976d2;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .cert-button:hover {
+      background-color: #0d47a1;
+    }
+    .project-list {
+      padding-left: 0;
+    }
+    .project-item {
+      margin-bottom: 15px;
+    }
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill-tag {
+      background-color: #b3e5fc;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+    .hover-preview {
+      display: block;
+    }
+    .preview-box img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 5px;
+      border-radius: 8px;
+    }
+    .download-button {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 4px 10px;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header style="text-align: center;">
+    <h1 style="color: rgb(0, 0, 0);">👋RESUME👋</h1>
+  </header>
+<script>
+  document.querySelectorAll('.section-hover .section-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.closest('.section-hover');
+      section.classList.toggle('active');
+    });
+  });
+
+  function toggleCertificate() {
+    const cert = document.getElementById("certificate");
+    cert.style.display = cert.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+  <main>
+    <section class="section-hover" style="background-color: #e3f2fd;">
+      <div class="section-header">About Me</div>
+      <div class="section-content">
+        <div style="text-align: center;">
+          <img src="images/myphoto.JPG" alt="My Profile Photo" width="225" height="200" style="border-radius: 12px;">
+        </div>
+        <h2 style="color: rgb(184, 134, 55);">¿Cómo está usted?</h2>
+        <p>Hi there! I am a passionate engineer with a strong background in electronics and programming. I enjoy solving complex problems and creating innovative solutions.</p>
+      </div>
+    </section>
+    
+<section class="section-hover section-languages">
+  <div class="section-header">Languages</div>
+  <div class="section-content language-box">
+    <div class="lang-item">
+      <strong>us English：</strong> I can speak and utilize English as native speakers. TOEIC 890 tested in high school
+      <br>
+      <button onclick="toggleCertificate()" class="cert-button">📄 Show Certificate</button>
+      <div id="certificate" class="certificate-box">
+        <img src="images/toeic-certificate.png.JPG" alt="TOEIC Certificate">
+      </div>
+    </div>
+
+    <div class="lang-item"><strong>中文：</strong>母語為中文使用者</div>
+    <div class="lang-item"><strong>Español：</strong>Hablo un poco de Español y actualmente estudiando</div>
+    <div class="lang-item"><strong>日本語：</strong>今、日本語を勉強しています。日常的な対話は大丈夫ですが、細かいルールは現在検討中。</div>
+  </div>
+</section>
+
+    <section class="section-hover section-projects">
+      <div class="section-header">Projects</div>
+      <div class="section-content">
+        <ul class="project-list">
+          <li class="project-item">
+            <span class="hover-preview">
+              Project 1: Drug-resistant Streptococcus
+              <div class="preview-box">
+                <img src="images/project1-preview.png" alt="Project 1 Preview">
+              </div>
+            </span>
+            <a class="download-button" href="https://drive.google.com/file/d/1_OaHg0EDtgLZsocfpuOgT43ftzH-U_m_/view?usp=drive_link" download>⬇️ Download Project</a>
+          </li>
+          <li class="project-item">
+            <span class="hover-preview">
+              Project 2: MCU-based system
+              <div class="preview-box">
+                <img src="images/project2-preview.png" alt="Project 2 Preview">
+              </div>
+            </span>
+            <a class="download-button" href="https://drive.google.com/file/d/1pzQObhYhT9uBltoQsVPdJtU3Qi_gZ6qG/view?usp=drive_link" download>⬇️ Download Project</a>
+          </li>
+          <li class="project-item">
+            <span class="hover-preview">
+              Project 3: Matlab simulation
+              <div class="preview-box">
+                <img src="images/project3-preview.jpg" alt="Project 3 Preview">
+              </div>
+            </span>
+            <a class="download-button" href="https://drive.google.com/file/d/1b2Nkrj2WMyZ0rmq9_dDHMjhYuvTsCm8o/view?usp=drive_link" download>⬇️ Download Project</a>
+          </li>
+         <li class="project-item">
+  <span class="hover-preview">
+    Project 4: Analysis of Cyclic Bifurcation
+    <div class="preview-box">
+      <img src="images/CYCLIC.png" alt="Cyclic Preview">
+    </div>
+  </span>
+  <a class="download-button" href="https://drive.google.com/file/d/1hIVEMoCVNm2OhITI2IsOBiHG9DdQJG-s/view?usp=drive_link" target="_blank">⬇️ View Paper</a>
+</li>
+
+        </ul>
+      </div>
+    </section>
+
+<section class="section-hover section-skills">
+  <div class="section-header">Skills</div>
+  <div class="section-content skills-container">
+    <span class="skill-tag">C</span>
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">HTML & CSS</span>
+    <span class="skill-tag">Matlab</span>
+  </div>
+</section>
+
+    <section class="section-hover" style="background-color: #fce4ec;">
+      <div class="section-header">Experience</div>
+      <div class="section-content">
+        <div class="experience-block">
+          <strong>助教 – 中原大學</strong> (2025/2–2025/6)<br>
+          協助授講與統計軟體教學、批改作業與考試，指導使用 Excel 與 SPSS。
+        </div>
+        <div class="experience-block">
+          <strong>售票接待 – 台北市立動物園</strong> (2018/3–2019/8)<br>
+          擔任售票事務與導覽，管理 13 人以上收銀隊伍。
+        </div>
+        <div class="experience-block">
+          <strong>專科訓練教師 – 鴻鑫補習班</strong> (2022/10–2023/5)<br>
+          教授小六英文文法與單字，輔導學生應試。
+        </div>
+      </div>
+    </section>
+
+    <section class="section-hover" style="background-color: #f3eafe;">
+      <div class="section-header">Reference / Recommendation</div>
+      <div class="section-content">
+        <p>Appreciate the professors to have my back. From the bottom of my heart.</p>
+        <p>
+          <strong>
+            <a href="https://eeweb.cycu.edu.tw/portfolio-item/4679/" target="_blank">
+              Asst. Prof.Shih-Hsiung Twu
+            </a>
+          </strong> - Electronics Engineering Department, CYCU
+        </p>
+        <p>
+          <strong>
+            <a href="https://site-783956-7297-5412.mystrikingly.com/" target="_blank">
+              Prof. Cole Carnesecca
+            </a>
+          </strong> - School of Religion, CYCU
+        </p>
+      </div>
+    </section>
+
+    <button onclick="scrollToTop()" style="position: fixed; bottom: 20px; right: 20px;">Back to Top</button>
+  </main>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    function toggleCertificate() {
+      const cert = document.getElementById("certificate");
+      cert.style.display = cert.style.display === "block" ? "none" : "block";
+    }
+  </script>
+<script>
+  document.getElementById("toggleModeBtn").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+  <footer style="text-align: center; margin-top: 40px;">
+    ALL rights reserved &copy; 2025 SANGUIS LECTER
+  </footer>
+  <script>
+  // 展開／收合每個 section
+  document.querySelectorAll('.section-hover .section-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const section = header.closest('.section-hover');
+      section.classList.toggle('active');
+    });
+  });
+</script>
+</body>
+</html>
