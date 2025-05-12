@@ -353,19 +353,30 @@ body.dark-mode .certificate-box img {
 /* 夜間模式按鈕調整：位置、尺寸、顏色 */
 #toggleModeBtn {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   z-index: 1000;
-  padding: 6px 14px;
+  padding: 8px 16px;
   font-size: 16px;
-  font-weight: 600;
-  background-color: #444;
-  color: #fff;
-  border-radius: 8px;
+  font-weight: bold;
+  border-radius: 10px;
   border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background-color: #424242;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#toggleModeBtn:hover {
+  background-color: #333333;
+  transform: scale(1.05);
+}
+
+/* 夜間模式下的背景 */
+body.dark-mode {
+  background-color: #1e1e1e;
+  background-image: none;
 }
 
 #toggleModeBtn:hover {
