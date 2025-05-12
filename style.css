@@ -370,7 +370,7 @@ body.dark-mode .certificate-box img {
 
 #toggleModeBtn:hover {
   background-color: #222;
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 /* 夜間模式下背景整體變暗 */
