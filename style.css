@@ -149,7 +149,7 @@ section {
 
 #backToTopBtn:hover, #toggleModeBtn:hover {
   background-color: #0d47a1;
-  transform: scale(1.05);
+  transform: scale(2);
 }
 
 /* -------------------------------
@@ -212,7 +212,7 @@ section {
   margin: 0 auto;
   border-radius: 6px;
   transition: transform 0.3s ease-in-out;
-  transform: scale(1);
+  transform: scale(2);
 }
 
 .preview-box:hover img {
