@@ -345,25 +345,44 @@ body.dark-mode .certificate-box img {
   filter: brightness(0.85);
 }
 
+#toggleModeBtn:hover {
+  background-color: #333;
+  transform: scale(1.2);
+}
+
+/* 夜間模式按鈕調整：位置、尺寸、顏色 */
 #toggleModeBtn {
   position: fixed;
-  top: 25px;
-  left: 25px;  /* 左上角 */
+  top: 20px;
+  left: 20px;
   z-index: 1000;
-  padding: 12px 20px;
+  padding: 6px 14px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
+  background-color: #444;
+  color: #fff;
+  border-radius: 8px;
   border: none;
-  border-radius: 10px;
-  background-color: #555;
-  color: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #toggleModeBtn:hover {
-  background-color: #333;
-  transform: scale(1.5);
+  background-color: #222;
+  transform: scale(1.05);
 }
 
+/* 夜間模式下背景整體變暗 */
+body.dark-mode {
+  background: linear-gradient(to bottom, #1e1e1e, #2c2c2c, #121212);
+}
+
+body.dark-mode header {
+  background-color: #263238;
+}
+
+body.dark-mode footer {
+  background-color: #212121;
+  color: #e0e0e0;
+}
