@@ -28,19 +28,16 @@ img {
 header, main, section {
   text-align: center;
 }
-
 header {
   padding: 20px;
   background-color: #b4c3f4;
 }
-
 footer {
   padding: 20px;
   background-color: #4e5675;
   text-align: center;
   color: white;
 }
-
 h1 { color: rgb(49, 47, 47); }
 h2 { color: rgb(50, 50, 50); }
 h2.special { color: rgb(184, 134, 55); }
@@ -49,7 +46,6 @@ h2.special { color: rgb(184, 134, 55); }
 section {
   padding: 20px;
 }
-
 .section-hover {
   margin: 15px auto;
   width: 95%;
@@ -60,7 +56,6 @@ section {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
-
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -73,21 +68,17 @@ section {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .section-header:hover {
   background-color: #155aaf;
 }
-
 .section-header::after {
   content: "▼";
   font-size: 18px;
   transition: transform 0.3s ease;
 }
-
 .section-hover.active .section-header::after {
   transform: rotate(180deg);
 }
-
 .section-content {
   max-height: 0;
   overflow: hidden;
@@ -96,7 +87,6 @@ section {
   padding: 0 20px;
   transition: max-height 0.6s ease, opacity 0.4s ease, transform 0.4s ease;
 }
-
 .section-hover.active .section-content {
   max-height: 3000px;
   opacity: 1;
@@ -104,7 +94,7 @@ section {
   padding: 25px 20px;
 }
 
-/* 🎨 區塊背景色 */
+/* 🎨 原始區塊背景色 */
 .section-about { background-color: #e3f2fd; }
 .section-languages { background-color: #e0f7fa; }
 .section-projects { background-color: #f1f8e9; }
@@ -112,7 +102,7 @@ section {
 .section-experience { background-color: #fce4ec; }
 .section-education { background-color: #ede7f6; }
 
-/* 🔝 回到頂部與夜間模式按鈕 */
+/* 🔝 回到頂部 / 夜間按鈕 */
 #backToTopBtn {
   position: fixed;
   bottom: 20px;
@@ -129,46 +119,34 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 #backToTopBtn:hover {
   background-color: #0d47a1;
   transform: scale(1.05);
 }
-
 #toggleModeBtn {
   position: fixed;
-  top: 12px;
-  left: 12px;
-  z-index: 1100;
-  padding: 5px 10px;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  padding: 6px 12px;
   font-size: 13px;
-  font-weight: bold;
-  border-radius: 6px;
+  font-weight: 600;
+  border-radius: 8px;
   background-color: #444;
   color: white;
   border: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
-
 #toggleModeBtn:hover {
-  background-color: #222;
+  background-color: #333;
   transform: scale(1.05);
 }
 
-/* 📁 Projects 預覽 */
-.project-list {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.project-item {
-  margin-bottom: 30px;
-  font-size: 18px;
-  position: relative;
-}
-
+/* 📁 Projects 預覽區 */
+.project-list { list-style: disc; padding-left: 20px; }
+.project-item { margin-bottom: 30px; font-size: 18px; position: relative; }
 .hover-preview {
   position: relative;
   display: inline-block;
@@ -176,7 +154,6 @@ section {
   color: #0d47a1;
   cursor: pointer;
 }
-
 .preview-box {
   display: block;
   position: fixed;
@@ -197,14 +174,12 @@ section {
   pointer-events: none;
   transition: all 0.4s ease;
 }
-
 .hover-preview:hover .preview-box {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
   visibility: visible;
   pointer-events: auto;
 }
-
 .preview-box img {
   max-width: 100%;
   height: auto;
@@ -214,11 +189,9 @@ section {
   border-radius: 6px;
   transition: transform 0.3s ease-in-out;
 }
-
 .preview-box:hover img {
   transform: scale(1.03);
 }
-
 .download-button {
   display: inline-block;
   margin-top: 5px;
@@ -230,7 +203,7 @@ section {
   font-weight: bold;
 }
 
-/* 🛠 技能技能 */
+/* 🛠 Skills 技能標籤 */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -238,7 +211,6 @@ section {
   gap: 12px;
   padding: 16px;
 }
-
 .skill-tag {
   background-color: #ffcc80;
   color: #333;
@@ -249,7 +221,6 @@ section {
   box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
   transition: all 0.2s ease-in-out;
 }
-
 .skill-tag:hover {
   transform: scale(1.1);
   background-color: #ffa726;
@@ -265,7 +236,6 @@ section {
   flex-direction: column;
   gap: 12px;
 }
-
 .lang-item {
   background: #ffffff;
   border-left: 6px solid #039be5;
@@ -275,7 +245,6 @@ section {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   line-height: 1.6;
 }
-
 .cert-button {
   margin-top: 10px;
   background-color: #1565c0;
@@ -287,23 +256,19 @@ section {
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
-
 .cert-button:hover {
   background-color: #0d47a1;
 }
-
 .certificate-box {
   margin-top: 10px;
   display: none;
   animation: fadeIn 0.3s ease-in-out;
 }
-
 .certificate-box img {
   max-width: 280px;
   border-radius: 6px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
@@ -314,58 +279,49 @@ body.dark-mode {
   background: linear-gradient(to bottom, #1a1a1a, #2a2a2a, #1e1e1e);
   color: #e0e0e0;
 }
-
 body.dark-mode header,
 body.dark-mode footer {
   background-color: #2c3e50;
 }
-
-body.dark-mode .section-hover {
-  background-color: #2b2b2b;
-  color: #f0f0f0;
-}
-
 body.dark-mode .section-header {
   background-color: #34495e;
   color: white;
 }
-
-body.dark-mode .section-content {
-  color: #e0e0e0;
-}
-
+body.dark-mode .section-about,
+body.dark-mode .section-languages,
+body.dark-mode .section-projects,
+body.dark-mode .section-skills,
 body.dark-mode .section-experience,
 body.dark-mode .section-education {
-  background-color: #1c1c1c;
-  color: #f0f0f0;
+  background-color: inherit;
+  color: #eeeeee;
 }
-
+body.dark-mode .section-content,
+body.dark-mode .section-content * {
+  color: #f0f0f0 !important;
+}
 body.dark-mode .lang-item {
   background-color: #3c3c3c;
   border-left-color: #26c6da;
-  color: #e8e8e8;
+  color: #f0f0f0;
 }
-
 body.dark-mode .project-download,
 body.dark-mode .cert-button {
   background-color: #2196f3;
 }
-
 body.dark-mode .project-download:hover,
 body.dark-mode .cert-button:hover {
   background-color: #1565c0;
 }
-
 body.dark-mode .skill-tag {
   background-color: #424242;
   color: #f5f5f5;
 }
-
 body.dark-mode .preview-box {
   background-color: #2a2a2a;
   border-color: #555;
+  color: #ffffff;
 }
-
 body.dark-mode .certificate-box img {
   filter: brightness(0.85);
 }
