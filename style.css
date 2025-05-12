@@ -186,27 +186,29 @@ section {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   z-index: 9999;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow: auto;
+  overflow: visible; /* ✅ 不剪裁內容 */
   text-align: center;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.5s ease, visibility 0s linear 1s;
+  max-width: none;   /* ✅ 取消寬度限制 */
+  max-height: none;  /* ✅ 取消高度限制 */
 }
 
 .hover-preview:hover .preview-box {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.08);
+  transform: translate(-50%, -50%) scale(1);
   visibility: visible;
   pointer-events: auto;
-  transition-delay: 0.2s;
+  animation: tv-on 0.4s ease-out; /* ✅ 呼叫開機動畫 */
 }
 
 .preview-box img {
-  max-width: 100%;
-  max-height: 80vh;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
   object-fit: contain;
   display: block;
   margin: 0 auto;
@@ -218,6 +220,21 @@ section {
 .preview-box:hover img {
   transform: scale(2);
 }
+
+@keyframes tv-on {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.01) scaleX(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scaleY(1.1) scaleX(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
 .project-download {
   margin-left: 24px;
