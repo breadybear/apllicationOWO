@@ -176,7 +176,7 @@ section {
 }
 .hover-preview:hover .preview-box {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1.5);
   visibility: visible;
   pointer-events: auto;
 }
@@ -190,7 +190,7 @@ section {
   transition: transform 0.3s ease-in-out;
 }
 .preview-box:hover img {
-  transform: scale(1.03);
+  transform: scale(1.5);
 }
 .download-button {
   display: inline-block;
