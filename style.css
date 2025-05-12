@@ -159,7 +159,7 @@ section {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(1);
   background-color: transparent; /* ✅ 背景透明 */
   border: none; /* ✅ 去除邊框 */
   padding: 0; /* ✅ 移除內距 */
@@ -177,7 +177,7 @@ section {
 
 .hover-preview:hover .preview-box {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.5); /* ✅ 放大預覽 */
+  transform: translate(-50%, -50%) scale(2); /* ✅ 放大預覽 */
   visibility: visible;
   pointer-events: auto;
 }
