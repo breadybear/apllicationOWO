@@ -344,3 +344,26 @@ body.dark-mode .preview-box {
 body.dark-mode .certificate-box img {
   filter: brightness(0.85);
 }
+
+#toggleModeBtn {
+  position: fixed;
+  top: 25px;
+  left: 25px;  /* 左上角 */
+  z-index: 1000;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #555;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleModeBtn:hover {
+  background-color: #333;
+  transform: scale(1.5);
+}
+
