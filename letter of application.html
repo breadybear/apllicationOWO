@@ -271,5 +271,25 @@
     document.body.classList.toggle("dark-mode");
   }
 </script>
+<script>
+  const texts = [
+    "Engineer. Dreamer. Problem-Solver.",
+    "Coding with curiosity 🧠",
+    "Lifelong learner 🌱",
+    "Building tomorrow, today 💡"
+  ];
+  let index = 0;
+  const textEl = document.getElementById("fade-text");
+
+  setInterval(() => {
+    textEl.classList.add("fade-out");
+    setTimeout(() => {
+      index = (index + 1) % texts.length;
+      textEl.textContent = texts[index];
+      textEl.classList.remove("fade-out");
+    }, 800);
+  }, 4000);
+</script>
+
 </body>
 </html>
